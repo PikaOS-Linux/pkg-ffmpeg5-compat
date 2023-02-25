@@ -14,7 +14,7 @@ CONFIG := --prefix=/opt/ffmpeg5/usr \
 	--libdir=/opt/ffmpeg5/usr/lib/$(DEB_HOST_MULTIARCH) \
 	--incdir=/opt/ffmpeg5/usr/include/$(DEB_HOST_MULTIARCH) \
 	--mandir=/opt/ffmpeg5/usr/share/man   \
-	--pkgconfigdir=/opt/ffmpeg5/usr/$(DEB_HOST_MULTIARCH)/pkgconfig \
+	--pkgconfigdir=/opt/ffmpeg5/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig \
 	--enable-rpath \
 	--extra-version="$(DEB_REVISION)" \
 	--toolchain=hardened \
@@ -94,12 +94,19 @@ CONFIG := --prefix=/opt/ffmpeg5/usr \
 	--enable-small \
 	--enable-vaapi \
 	--enable-version3 \
-	--enable-vulkan
-
-# avoid pocketsphinx on mips (bug#812335), alpha, ia64 and big-endian (bug#968456)
-ifeq (,$(filter i386 mips% alpha ia64,$(DEB_HOST_ARCH))$(filter big,$(DEB_HOST_ARCH_ENDIAN)))
-CONFIG += --enable-pocketsphinx
-endif
+	--enable-vulkan \
+	--enable-chromaprint \
+	--enable-frei0r \
+	--enable-libx264 \
+	--enable-shared \
+	--enable-version3 \
+	--disable-programs \
+	--enable-libaribb24 \
+	--enable-libopencore_amrnb \
+	--enable-libopencore_amrwb \
+	--enable-libtesseract \
+	--enable-libvo_amrwbenc \
+	 --enable-libsmbclient \
 
 # avoid librsvg on almost all ports (bug#983344, bug#991556)
 ifeq (,$(filter alpha hppa hurd-i386 ia64 kfreebsd-amd64 kfreebsd-i386 m86k sh4 x32,$(DEB_HOST_ARCH)))
@@ -109,36 +116,7 @@ endif
 ifeq (amd64,$(DEB_HOST_ARCH))
 CONFIG += --enable-libmfx \
 	--enable-nvenc \
-	--enable-amf
-endif
-
-# The standard configuration only uses the shared CONFIG.
-CONFIG_standard = --enable-shared
-
-# Additional features, compatible with effective licensing of GPLv3+
-CONFIG_extra = --enable-shared \
-	--enable-version3 \
-	--disable-doc \
-	--disable-programs \
-	--enable-libaribb24 \
-	--enable-libopencore_amrnb \
-	--enable-libopencore_amrwb \
-	--enable-libtesseract \
-	--enable-libvo_amrwbenc
-
-# Do not enable libsmbclient support on hurd-i386
-ifeq (,$(filter hurd-i386,$(DEB_HOST_ARCH)))
-	CONFIG_extra += --enable-libsmbclient
-endif
-
-# The static libraries should not be built with PIC.
-CONFIG_static = --disable-pic \
-	--disable-doc \
-	--disable-programs
-
-# Disable optimizations if requested.
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CONFIG += --disable-optimizations
+	--enable-amf \
 endif
 
 # Respect CC/CXX from the environment, if they differ from the default.
@@ -150,20 +128,6 @@ ifneq (g++,$(CXX))
 	CONFIG += --cxx=$(CXX)
 endif
 
-# ffmpeg is involved in build-dependency cycles with x264 and chromaprint, so disable them in stage one.
-# Also disable frei0r, which build-depends on opencv.
-ifneq (,$(filter pkg.ffmpeg.stage1,$(DEB_BUILD_PROFILES)))
-	CONFIG += \
-		--disable-chromaprint \
-		--disable-frei0r \
-		--disable-libplacebo \
-		--disable-libx264
-else
-	CONFIG += \
-		--enable-chromaprint \
-		--enable-frei0r \
-		--enable-libx264
-endif
 # Some libraries are built only on linux.
 ifneq (linux,$(DEB_HOST_ARCH_OS))
 	CONFIG += --enable-libplacebo
