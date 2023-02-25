@@ -106,7 +106,7 @@ CONFIG := --prefix=/opt/ffmpeg5/usr \
 	--enable-libopencore_amrwb \
 	--enable-libtesseract \
 	--enable-libvo_amrwbenc \
-	 --enable-libsmbclient \
+	 --enable-libsmbclient
 
 # avoid librsvg on almost all ports (bug#983344, bug#991556)
 ifeq (,$(filter alpha hppa hurd-i386 ia64 kfreebsd-amd64 kfreebsd-i386 m86k sh4 x32,$(DEB_HOST_ARCH)))
@@ -116,7 +116,7 @@ endif
 ifeq (amd64,$(DEB_HOST_ARCH))
 CONFIG += --enable-libmfx \
 	--enable-nvenc \
-	--enable-amf \
+	--enable-amf
 endif
 
 # Respect CC/CXX from the environment, if they differ from the default.
