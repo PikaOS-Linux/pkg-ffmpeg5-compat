@@ -1,0 +1,6 @@
+debian/standard/doc/doxy/html/* opt/ffmpeg5/usr/share/doc/ffmpeg/api
+opt/ffmpeg5/usr/share/doc/ffmpeg/*.html usr/share/doc/ffmpeg/manual
+opt/ffmpeg5/usr/share/doc/ffmpeg/*.css usr/share/doc/ffmpeg/manual
+doc/APIchanges opt/ffmpeg5/usr/share/doc/ffmpeg/developer-info
+doc/*.txt opt/ffmpeg5/usr/share/doc/ffmpeg/developer-info
+opt/ffmpeg5/usr/share/man/man3

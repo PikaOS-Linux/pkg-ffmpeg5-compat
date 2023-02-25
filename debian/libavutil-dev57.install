@@ -1,0 +1,4 @@
+opt/ffmpeg5/usr/include/*/libavutil
+opt/ffmpeg5/usr/lib/*/libavutil*.a
+opt/ffmpeg5/usr/lib/*/libavutil*.so
+opt/ffmpeg5/usr/lib/*/pkgconfig/libavutil*.pc

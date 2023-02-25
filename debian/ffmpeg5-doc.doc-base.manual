@@ -1,0 +1,8 @@
+Document: ffmpeg-manual
+Title: FFmpeg Manual
+Author: FFmpeg Developers
+Section: Video
+
+Format: HTML
+Index: /opt/ffmpeg5/usr/share/doc/ffmpeg/manual/index.html
+Files: /opt/ffmpeg5/usr/share/doc/ffmpeg/manual/*.html
