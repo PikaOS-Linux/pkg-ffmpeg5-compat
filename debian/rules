@@ -100,13 +100,12 @@ CONFIG := --prefix=/opt/ffmpeg5/usr \
 	--enable-libx264 \
 	--enable-shared \
 	--enable-version3 \
-	--disable-programs \
 	--enable-libaribb24 \
 	--enable-libopencore_amrnb \
 	--enable-libopencore_amrwb \
 	--enable-libtesseract \
 	--enable-libvo_amrwbenc \
-	 --enable-libsmbclient
+	--enable-libsmbclient
 
 # avoid librsvg on almost all ports (bug#983344, bug#991556)
 ifeq (,$(filter alpha hppa hurd-i386 ia64 kfreebsd-amd64 kfreebsd-i386 m86k sh4 x32,$(DEB_HOST_ARCH)))
