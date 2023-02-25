@@ -105,7 +105,8 @@ CONFIG := --prefix=/opt/ffmpeg5/usr \
 	--enable-libopencore_amrwb \
 	--enable-libtesseract \
 	--enable-libvo_amrwbenc \
-	--enable-libsmbclient
+	--enable-libsmbclient \
+	--enable-libplacebo
 
 # avoid librsvg on almost all ports (bug#983344, bug#991556)
 ifeq (,$(filter alpha hppa hurd-i386 ia64 kfreebsd-amd64 kfreebsd-i386 m86k sh4 x32,$(DEB_HOST_ARCH)))
@@ -125,13 +126,6 @@ ifneq (cc,$(CC))
 endif
 ifneq (g++,$(CXX))
 	CONFIG += --cxx=$(CXX)
-endif
-
-# Some libraries are built only on linux.
-ifneq (linux,$(DEB_HOST_ARCH_OS))
-	CONFIG += --enable-libplacebo
-else
-	CONFIG += --disable-libplacebo
 endif
 
 # Disable assembly optimizations on x32, because they don't work (yet).
