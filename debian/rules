@@ -119,10 +119,6 @@ CONFIG += --enable-libmfx \
 	--enable-amf
 endif
 
-
-ifeq (i386,$(DEB_HOST_ARCH))
-CONFIG +=
-
 # Respect CC/CXX from the environment, if they differ from the default.
 # Don't set them if they equal the default, because that disables autodetection needed for cross-building.
 ifneq (cc,$(CC))
