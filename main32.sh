@@ -12,6 +12,7 @@ mv ./FFmpeg ./ffmpeg
 cd ./ffmpeg
 
 # Get build deps
+apt-get install crossbuild-essential-i386
 apt-get build-dep ./ -y -a i386
 
 # Build package

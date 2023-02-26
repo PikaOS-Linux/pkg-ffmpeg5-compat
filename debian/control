@@ -15,7 +15,6 @@ Vcs-Git: https://salsa.debian.org/multimedia-team/ffmpeg.git
 Vcs-Browser: https://salsa.debian.org/multimedia-team/ffmpeg
 Build-Depends:
 # autodetected: hwaccels 'cuda_llvm'
- clang:amd64 [i386],
  clang [amd64 arm64 ppc64el],
  debhelper-compat (= 13),
 # --enable-libglslang,
