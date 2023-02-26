@@ -221,7 +221,7 @@ Build-Depends:
  zlib1g-dev
 
 Package: ffmpeg5
-Architecture: any
+Architecture: amd64
 Multi-Arch: foreign
 Depends:
  ${shlibs:Depends},
