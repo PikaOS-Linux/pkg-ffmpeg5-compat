@@ -20,8 +20,6 @@ CONFIG := --prefix=/opt/ffmpeg5/usr \
 	--toolchain=hardened \
 	--arch=$(DEB_HOST_ARCH_CPU) \
 	--disable-stripping \
-	--disable-static \
-	--enable-pic \
 	--enable-chromaprint \
 	--enable-frei0r \
 	--enable-gmp  \
