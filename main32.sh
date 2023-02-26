@@ -14,6 +14,7 @@ cd ./ffmpeg
 # Get build deps
 apt-get install crossbuild-essential-i386
 apt-get build-dep ./ -y -a i386
+apt-get install -y cleancss node-less
 
 # Build package
 LOGNAME=root dh_make --createorig -y -l -p ffmpeg_5.1.3
