@@ -1,4 +1,4 @@
-Source: ffmpeg
+Source: ffmpeg5
 Section: video
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
