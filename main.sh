@@ -11,6 +11,7 @@ mv ./FFmpeg ./ffmpeg5
 cd ./ffmpeg5
 
 # Get build deps
+apt-get install build-essential -y
 apt-get build-dep ./ -y
 
 # Build package
