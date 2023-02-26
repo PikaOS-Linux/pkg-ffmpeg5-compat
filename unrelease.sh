@@ -13,5 +13,5 @@ reprepro -V --basedir ./output/repo/ removefilter kinetic 'Package (% libpostpro
 reprepro -V --basedir ./output/repo/ removefilter kinetic 'Package (% libswresample4*)'
 reprepro -V --basedir ./output/repo/ removefilter kinetic 'Package (% libswscale6*)'
 
-# Add the new package to the repo
-reprepro -V --basedir ./output/repo/ includedeb kinetic ./output/*.deb
+# Push the updated ppa repo to the server
+rsync -azP ./output/repo/ ferreo@direct.pika-os.com:/srv/www/pikappa/
