@@ -25,3 +25,4 @@ dpkg-buildpackage -a i386
 cd ../
 mkdir -p ./output
 mv ./*.deb ./output/
+rm -rfv ./output/ffmpeg-doc*.deb
