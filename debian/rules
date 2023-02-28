@@ -159,8 +159,11 @@ override_dh_auto_clean:
 
 # Add configuration options:
 override_dh_auto_configure:
+	PATH := /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/ffmpeg5/usr/bin \
+	LD_LIBRARY_PATH := /usr/lib/x86_64-linux-gnu/libfakeroot:/usr/local/lib/i386-linux-gnu:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/lib/i686-linux-gnu:/lib/i686-linux-gnu:/usr/lib/i686-linux-gnu:/usr/local/lib:/usr local/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib:/opt/ffmpeg5/usr/lib/x86_64-linux-gnu:/opt/ffmpeg5/usr/lib/i386-linux-gnu \
+	PKG_CONFIG_PATH := /usr/lib/x86_64-linux-gnu/libfakeroot/pkgconfig:/usr/local/lib/i386-linux-gnu/pkgconfig:/lib/i386-linux-gnu/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig:/usr/local/lib/i686-linux-gnu/pkgconfig:/lib/i686-linux-gnu/pkgconfig:/usr/lib/i686-linux-gnu/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/lib/x86_64-linux-gnu/pkgconfig:/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/opt/ffmpeg5/usr/lib/x86_64-linux-gnu/pkgconfig:/opt/ffmpeg5/usr/lib/i386-linux-gnu/pkgconfig \
 	./configure \
-		$(CONFIG)
+	$(CONFIG)
 
 override_dh_install:
 	dh_install
