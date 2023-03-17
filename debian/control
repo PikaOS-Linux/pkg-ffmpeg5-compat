@@ -51,7 +51,8 @@ Build-Depends:
 # --enable-libcdio
  libcdio-paranoia-dev,
 # --enable-libchromaprint
- libchromaprint-dev,
+ libchromaprint-dev (= 1.5.1-2build1),
+ libchromaprint1 (= 1.5.1-2build1),
 # --enable-libcodec2
  libcodec2-dev,
 # --enable-libdav1d
