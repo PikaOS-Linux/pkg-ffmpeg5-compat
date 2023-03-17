@@ -1,4 +1,0 @@
-opt/ffmpeg5/usr/include/*/libavfilter
-opt/ffmpeg5/usr/lib/*/libavfilter*.a
-opt/ffmpeg5/usr/lib/*/libavfilter*.so
-opt/ffmpeg5/usr/lib/*/pkgconfig/libavfilter*.pc

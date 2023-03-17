@@ -1,4 +1,0 @@
-opt/ffmpeg5/usr/include/*/libpostproc
-opt/ffmpeg5/usr/lib/*/libpostproc*.a
-opt/ffmpeg5/usr/lib/*/libpostproc*.so
-opt/ffmpeg5/usr/lib/*/pkgconfig/libpostproc*.pc

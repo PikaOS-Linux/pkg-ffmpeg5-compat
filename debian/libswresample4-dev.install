@@ -1,4 +1,0 @@
-opt/ffmpeg5/usr/include/*/libswresample
-opt/ffmpeg5/usr/lib/*/libswresample*.a
-opt/ffmpeg5/usr/lib/*/libswresample*.so
-opt/ffmpeg5/usr/lib/*/pkgconfig/libswresample*.pc

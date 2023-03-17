@@ -1,4 +1,0 @@
-opt/ffmpeg5/usr/include/*/libavcodec
-opt/ffmpeg5/usr/lib/*/libavcodec*.a
-opt/ffmpeg5/usr/lib/*/libavcodec*.so
-opt/ffmpeg5/usr/lib/*/pkgconfig/libavcodec*.pc
