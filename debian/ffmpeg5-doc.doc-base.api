@@ -1,0 +1,9 @@
+Document: ffmpeg-api
+Title: FFmpeg API Documentation
+Author: FFmpeg Developers
+Abstract: This is the API documentation for FFmpeg.
+Section: Programming/C
+
+Format: HTML
+Index: /opt/ffmpeg5/usr/share/doc/ffmpeg/api/index.html
+Files: /opt/ffmpeg5/usr/share/doc/ffmpeg/api/*.html

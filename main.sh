@@ -5,15 +5,16 @@ add-apt-repository ppa:pikaos/pika
 add-apt-repository ppa:kubuntu-ppa/backports
 
 # Clone Upstream
-git clone https://github.com/acoustid/chromaprint.git
-cp -rvf ./debian ./chromaprint
-cd ./chromaprint
+git clone https://github.com/FFmpeg/FFmpeg -b release/5.1
+cp -rvf ./debian ./FFmpeg
+mv ./FFmpeg ./ffmpeg
+cd ./ffmpeg
 
 # Get build deps
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p chromaprint_1.5.1
+LOGNAME=root dh_make --createorig -y -l -p ffmpeg_5.1.3
 dpkg-buildpackage
 
 # Move the debs to output

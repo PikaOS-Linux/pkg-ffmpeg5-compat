@@ -1,0 +1,4 @@
+opt/ffmpeg5/usr/include/*/libswscale
+opt/ffmpeg5/usr/lib/*/libswscale*.a
+opt/ffmpeg5/usr/lib/*/libswscale*.so
+opt/ffmpeg5/usr/lib/*/pkgconfig/libswscale*.pc

@@ -1,0 +1,4 @@
+opt/ffmpeg5/usr/include/*/libavdevice
+opt/ffmpeg5/usr/lib/*/libavdevice*.a
+opt/ffmpeg5/usr/lib/*/libavdevice*.so
+opt/ffmpeg5/usr/lib/*/pkgconfig/libavdevice*.pc
