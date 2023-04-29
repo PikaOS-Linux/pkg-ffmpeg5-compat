@@ -89,6 +89,8 @@ Build-Depends:
  liblzma-dev,
 # --enable-libmfx
  libmfx-dev [amd64],
+# --enable-libfdk-aac
+ libfdk-aac-dev [amd64],
 # --enable-libmp3lame
  libmp3lame-dev,
 # --enable-libmysofa
