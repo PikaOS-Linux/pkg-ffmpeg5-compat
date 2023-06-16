@@ -1,9 +1,3 @@
-# Add dependent repositories
-wget -q -O - https://ppa.pika-os.com/key.gpg | sudo apt-key add -
-add-apt-repository https://ppa.pika-os.com
-add-apt-repository ppa:pikaos/pika
-add-apt-repository ppa:kubuntu-ppa/backports
-
 # Clone Upstream
 git clone https://github.com/FFmpeg/FFmpeg -b release/5.1
 cp -rvf ./debian ./FFmpeg
@@ -11,6 +5,7 @@ mv ./FFmpeg ./ffmpeg
 cd ./ffmpeg
 
 # Get build deps
+apt-get install dh-make -y
 apt-get build-dep ./ -y
 
 # Build package
