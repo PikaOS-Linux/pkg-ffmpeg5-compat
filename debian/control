@@ -28,6 +28,8 @@ Build-Depends:
  debhelper-compat (= 13),
 # --enable-libglslang,
  glslang-dev,
+ spirv-headers,
+ spirv-tools,
 # --enable-libflite
  flite1-dev,
 # --enable-frei0r
@@ -52,7 +54,6 @@ Build-Depends:
  libcdio-paranoia-dev,
 # --enable-libchromaprint
  libchromaprint-dev,
- libchromaprint1,
 # --enable-libcodec2
  libcodec2-dev,
 # --enable-libdav1d
@@ -168,7 +169,6 @@ Build-Depends:
  libvpx-dev,
 # autodetected: vulkan
  libvulkan-dev [linux-any],
- vulkan-headers,
 # --enable-libwebp
  libwebp-dev,
 # --enable-libx264
@@ -211,6 +211,7 @@ Build-Depends:
  libmodplug-dev,
 # --enable-vulkan
  libvulkan-dev,
+ vulkan-headers,
 # --enable-librtmp
  librtmp-dev,
 # Unknown
