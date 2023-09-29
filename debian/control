@@ -168,7 +168,7 @@ Build-Depends:
  libvpx-dev,
 # autodetected: vulkan
  libvulkan-dev [linux-any],
- vulkan-headers
+ vulkan-headers,
 # --enable-libwebp
  libwebp-dev,
 # --enable-libx264
