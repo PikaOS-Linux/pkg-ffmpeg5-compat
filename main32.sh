@@ -8,7 +8,7 @@ cd ./ffmpeg
 apt-get install dh-make -y
 apt-get build-dep ./ -y
 
-for i in ../patches/* ; do echo "Applying Patch: $i" && patch -Np1 -i $i || echo "Applying Patch $i Failed!"; done
+#for i in ../patches/* ; do echo "Applying Patch: $i" && patch -Np1 -i $i || echo "Applying Patch $i Failed!"; done
 
 # Build package
 dpkg-buildpackage --no-sign
