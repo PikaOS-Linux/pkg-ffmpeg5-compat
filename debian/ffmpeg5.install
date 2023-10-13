@@ -5,3 +5,4 @@ opt/ffmpeg5/usr/share/ffmpeg/*.xsd
 RELEASE_NOTES						opt/ffmpeg5/usr/share/doc/ffmpeg
 debian/99ffmpeg5.conf etc/environment.d
 debian/69ffmpeg5.sh etc/profile.d
+debian/69-ffmpeg5.conf usr/share/pika/ld.so.d
